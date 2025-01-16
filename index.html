@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name = viewport content = "width=device-width, initial-scale=1.0"></meta>
+    <title>Family Budget</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <meta name = "description" content = "Family Budget"></meta>
+    <meta name = "author" content = "James"></meta>
+</head>
+<body>
+    <header>
+      <h1>Budget Breakdown</h1>
+    </header>
+
+    <main>
+      <button onclick="toggleBreakdown('james')">James</button>
+      <button onclick="toggleBreakdown('beth')">Beth</button>
+  
+      <div id = "breakdown-container" class = "breakdown">
+        <h2 id = "breakdown-title"></h2>
+        <table>
+            <tbody id = "breakdown-table">
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src = "script.js"></script>
+
+  </body>
