@@ -77,9 +77,9 @@ button:hover {
 
 .coins {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 50px;
+  bottom: 20px;
+  right: 15px;
+  width: 100px;
   height: auto;
   z-index: 100;
 }

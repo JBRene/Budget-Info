@@ -54,3 +54,47 @@ function toggleBreakdown(person) {
     currentPerson = person;
     }
 }
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+
+        // Check for updates
+        registration.onupdatefound = () => {
+            const installingWorker = registration.installing;
+            installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed') {
+                    if (navigator.serviceWorker.controller) {
+                        // Notify user of the update
+                        showUpdateNotification();
+                    }
+                }
+            };
+        };
+    }).catch((error) => {
+        console.error('Service Worker registration failed:', error);
+    });
+}
+
+function showUpdateNotification() {
+    const updateNotification = document.createElement('div');
+    updateNotification.innerHTML = `
+        <div id="update-notification"
+                style="position: fixed;
+                bottom: 10px;
+                right: 10px;
+                background: #007bff;
+                color: white;
+                padding: 10px;
+                border-radius: 5px; 
+                z-index: 1000;">
+            A new update is available. <button id="reload">Reload</button>
+        </div>
+    `;
+    document.body.appendChild(updateNotification);
+
+    // Reload the page on button click
+    document.getElementById('reload').addEventListener('click', () => {
+        window.location.reload();
+    });
+}
