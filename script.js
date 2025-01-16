@@ -28,21 +28,21 @@ const budgetData = {
 
 };
 
+let currentPerson = null;
+
 function toggleBreakdown(person) {
     const container = document.getElementById("breakdown-container");
     // const title = document.getElementById("breakdown-title");
     const tableBody = document.getElementById("breakdown-table");
     
-    // Toggle visibility of the container
-    if (container.style.display === "none" || container.style.display === "") {
-        // Populate the table with selected person's data
+    if (currentPerson === person) {
+        container.style.display = "none";
+        currentPerson = null;
+    } else {
         const data = budgetData[person];
-        // title.textContent = data.title;
 
-        // Clear existing rows
         tableBody.innerHTML = "";
 
-        // Add rows dynamically
         data.breakdown.forEach((item) => {
             const row = document.createElement("tr");
             row.innerHTML = `
@@ -53,7 +53,6 @@ function toggleBreakdown(person) {
     });
 
     container.style.display = "block";
-    } else {
-        container.style.display = "none";
+    currentPerson = person;
     }
 }
