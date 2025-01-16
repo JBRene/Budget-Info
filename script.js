@@ -47,7 +47,7 @@ function toggleBreakdown(person) {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td class = "cat">${item.category}</td>
-                <td class = "dollar">$${item.amount}</td>
+                <td class = "dollar">$ ${item.amount}.00</td>
             `;
             tableBody.appendChild(row);
     });
