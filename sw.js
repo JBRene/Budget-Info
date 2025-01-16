@@ -1,4 +1,4 @@
-const CACHE_NAME = 'family-budget-cache-v1test2';
+const CACHE_NAME = 'family-budget-cache-v2';
 const urlsToCache = [
     '',
     'index.html',
@@ -40,13 +40,15 @@ self.addEventListener('activate', (event) => {
 // Fetch event
 self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request).then((response) => {
-            return response || fetch(event.request).then(networkResponse => {
+        fetch(event.request).then((networkResponse) => {
+            if (networkResponse) {
                 return caches.open(CACHE_NAME).then((cache) => {
                     cache.put(event.request, networkResponse.clone());
                     return networkResponse;
                 });
-            });
+            }
+        }).catch(() => {
+            return caches.match(event.request);
         })
     );
 });
