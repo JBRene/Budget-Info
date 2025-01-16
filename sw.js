@@ -1,4 +1,4 @@
-const CACHE_NAME = 'family-budget-cache-v1';
+const CACHE_NAME = 'family-budget-cache-v1test';
 const urlsToCache = [
     '',
     'index.html',
