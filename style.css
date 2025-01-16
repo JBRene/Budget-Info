@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #f4f4f4;
-    color: #333;
+    background: #51344D;
+    color: #EADEDA;
   }
   
   header {
-    background: #007bff;
-    color: white;
+    background: #f2af29;
+    color: black;
     padding: 1em;
   }
   
@@ -19,14 +21,12 @@ body {
   
   .breakdown {
     display: none; /* Hidden by default */
+    padding: 1em;
     margin: 1em auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    background: #51344D;
+    text-align: right;
     width: 90%;
-    max-width: 400px;
+    max-width: 300px;
   }
   
   table {
@@ -36,24 +36,26 @@ body {
   
   table th, table td {
     text-align: left;
-    padding: 0.5em;
+    padding: 1em;
   }
-  
-  table tr {
-    border-bottom: 1px solid #ddd;
+
+  .dollar {
+    text-align: right;
+    font-weight: 700;
   }
   
   button {
-    background: #007bff;
+    background: #51344D;
     color: white;
-    border: none;
+    border: 0.1em solid #51344D;
     padding: 0.5em 1em;
     margin: 1em;
-    font-size: 1em;
-    border-radius: 5px;
+    font-size: 1.5em;
+    border-radius: 10px;
     cursor: pointer;
   }
   
   button:hover {
-    background: #0056b3;
+    background: #f2af29;
+    color: white;
   }

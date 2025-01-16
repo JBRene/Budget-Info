@@ -30,14 +30,14 @@ const budgetData = {
 
 function toggleBreakdown(person) {
     const container = document.getElementById("breakdown-container");
-    const title = document.getElementById("breakdown-title");
+    // const title = document.getElementById("breakdown-title");
     const tableBody = document.getElementById("breakdown-table");
     
     // Toggle visibility of the container
     if (container.style.display === "none" || container.style.display === "") {
         // Populate the table with selected person's data
         const data = budgetData[person];
-        title.textContent = data.title;
+        // title.textContent = data.title;
 
         // Clear existing rows
         tableBody.innerHTML = "";
@@ -46,8 +46,8 @@ function toggleBreakdown(person) {
         data.breakdown.forEach((item) => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${item.category}</td>
-                <td>$${item.amount}</td>
+                <td class = "cat">${item.category}</td>
+                <td class = "dollar">$${item.amount}</td>
             `;
             tableBody.appendChild(row);
     });
