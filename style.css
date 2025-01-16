@@ -2,19 +2,19 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   text-align: center;
-  background: #51344D;
-  color: #EADEDA;
+  background: #F4F4F9;
+  color: #586F7C;
 }
 
 header {
   font-weight: 600;
-  background: #f2af29;
-  color: black;
-  padding: 1em;
+  background: #F4F4F9;
+  color: #586F7C;
+  padding: 0.5em;
 }
 
 h2 {
@@ -24,14 +24,14 @@ h2 {
 }
 
 main {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .breakdown {
   display: none; /* Hidden by default */
   padding: 1em;
   margin: 1em auto;
-  background: #51344D;
+  background: #F4F4F9;
   text-align: right;
   width: 90%;
   max-width: 300px;
@@ -53,23 +53,33 @@ table th, table td {
 
 .dollar {
   text-align: right;
+  color: #04724D;
   font-weight: 500;
 }
 
 button {
   font-family: inherit;
   font-weight: inherit;
-  background: #51344D;
-  color: white;
-  border: 0.1em solid #51344D;
+  background: #F4F4F9;
+  color: #586F7C;
+  border: 0.1em solid #F4F4F9;
   padding: 0.5em 1em;
-  margin: 1em;
-  font-size: 1.5em;
+  margin: 0.5em 1em;
+  font-size: 1.2em;
   border-radius: 10px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #f2af29;
+  background: #04724D;
   color: white;
+}
+
+.coins {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+  z-index: 100;
 }
