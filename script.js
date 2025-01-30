@@ -26,7 +26,11 @@ const budgetData = {
 
 };
 
+let startX = 0;
+let currentTable = "james";
 let currentPerson = null;
+
+const tableWrapper = document.getElementById("swipe-wrapper");
 
 function toggleBreakdown(person) {
     const container = document.getElementById("breakdown-container");
@@ -43,10 +47,18 @@ function toggleBreakdown(person) {
 
         data.breakdown.forEach((item) => {
             const row = document.createElement("tr");
-            row.innerHTML = `
-                <td class = "cat">${item.category}</td>
-                <td class = "dollar">$ ${item.amount}.00</td>
-            `;
+            if (item.category === "Groceries") {
+                row.innerHTML = `
+                    <td class = "cat" style = "border-bottom: 1px solid #04724D">${item.category}</td>
+                    <td class = "dollar" style = "border-bottom: 1px solid #04724D">$ ${item.amount}.00</td>
+                `;
+            } else {
+                row.innerHTML = `
+                    <td class = "cat">${item.category}</td>
+                    <td class = "dollar">$ ${item.amount}.00</td>
+                `;
+            }
+
             tableBody.appendChild(row);
     });
 
