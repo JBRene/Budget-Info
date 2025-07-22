@@ -57,11 +57,29 @@ table th, table td {
   font-weight: 500;
 }
 
+@keyframes swirl {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 button {
   font-family: inherit;
   font-weight: inherit;
-  background: #F4F4F9;
-  color: #586F7C;
+  background: linear-gradient(270deg, #FF416C, #FF4B2B, #FF7E5F, #FF1B6B);
+  background-size: 400% 400%;
+  transition: background 0.5s ease-in-out;
+  color: #FFFFFF;
+  /* background: #F4F4F9; */
+  /* color: #586F7C; */
   border: 0.1em solid #F4F4F9;
   padding: 0.5em 1em;
   margin: 0.5em 1em;
@@ -71,15 +89,10 @@ button {
 }
 
 button:hover {
-  background: #04724D;
-  color: white;
+  animation: swirl 3s infinite linear;
 }
 
-.coins {
-  position: fixed;
-  bottom: 20px;
-  right: 15px;
-  width: 100px;
-  height: auto;
-  z-index: 100;
-}
+/* button:hover {
+  background: #04724D;
+  color: white;
+} */
