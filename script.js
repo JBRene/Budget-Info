@@ -8,8 +8,9 @@ const budgetData = {
             { category: "Savings", amount: 78 },
             { category: "Health", amount: 13 },
             { category: "Entertainment", amount: 13 },
+            { category: "Holiday", amount: 26 },
             { category: "Debts", amount: 39 },
-            { category: "Disposable", amount: 330}
+            { category: "Disposable", amount: 304}
         ],
     },
     beth: {
@@ -21,8 +22,9 @@ const budgetData = {
             { category: "Savings", amount: 74 },
             { category: "Health", amount: 13 },
             { category: "Entertainment", amount: 13 },
+            { category: "Holiday", amount: 25 },
             { category: "Debts", amount: 37 },
-            { category: "Disposable", amount: 314}
+            { category: "Disposable", amount: 289}
         ],
     },
 
