@@ -3,28 +3,28 @@ const budgetData = {
         title: "James",
         breakdown: [
             { category: "Mortgage", amount: 475 },
-            { category: "Bills", amount: 385 },
-            { category: "Groceries", amount: 303 },
-            { category: "Savings", amount: 78 },
+            { category: "Bills", amount: 413 },
+            { category: "Groceries", amount: 334 },
+            { category: "Savings", amount: 90 },
             { category: "Health", amount: 13 },
             { category: "Entertainment", amount: 13 },
             { category: "Holiday", amount: 26 },
-            { category: "Debts", amount: 39 },
-            { category: "Disposable", amount: 304}
+            { category: "Maintenance", amount: 26 },
+            { category: "Disposable", amount: 256}
         ],
     },
     beth: {
         title: "Beth",
         breakdown: [
             { category: "Mortgage", amount: 451 },
-            { category: "Bills", amount: 366 },
-            { category: "Groceries", amount: 288 },
-            { category: "Savings", amount: 74 },
+            { category: "Bills", amount: 393 },
+            { category: "Groceries", amount: 317 },
+            { category: "Savings", amount: 86 },
             { category: "Health", amount: 13 },
             { category: "Entertainment", amount: 13 },
             { category: "Holiday", amount: 25 },
-            { category: "Debts", amount: 37 },
-            { category: "Disposable", amount: 289}
+            { category: "Debts", amount: 25 },
+            { category: "Disposable", amount: 243}
         ],
     },
 
